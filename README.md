@@ -21,9 +21,14 @@ You can do this by following instructions at https://github.com/nvm-sh/nvm#insta
 
 Alternatively, configure your environment to use NodeJS v10
 
-nvm install v10.20.0
+`nvm install v10.20.0
+
 nvm use v10.20.0
+
 npm install -g truffle
+
 npm install
+
 truffle develop
-test
+
+test`
