@@ -31,4 +31,5 @@ npm install
 
 truffle develop
 
-test`
+test
+```
