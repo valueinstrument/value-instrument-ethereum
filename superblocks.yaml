@@ -1,0 +1,20 @@
+version: 1
+jobs:
+  compile:
+    image: node
+    script:
+      - npm install truffle
+      - npm install truffle-assertions
+      - npm install truffle-hdwallet-provider
+      - npm install chalk
+      - npx truffle compile
+  test:
+    image: node
+    script:
+      - npm install truffle
+      - npx truffle test
+stages:
+  - pipeline:
+      jobs:
+        - compile
+        - test
