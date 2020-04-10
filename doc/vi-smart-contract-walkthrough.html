@@ -2226,7 +2226,7 @@
       </tr>
       <tr>
         <td id="L266" class="blob-num js-line-number" data-line-number="266"></td>
-        <td id="LC266" class="blob-code blob-code-inner js-file-line">    uint _communityTax,</td>
+        <td id="LC266" class="blob-code blob-code-inner js-file-line">    uint _communityContribution,</td>
       </tr>
       <tr>
         <td id="L267" class="blob-num js-line-number" data-line-number="267"></td>
@@ -2238,7 +2238,7 @@
       </tr>
       <tr>
         <td id="L269" class="blob-num js-line-number" data-line-number="269"></td>
-        <td id="LC269" class="blob-code blob-code-inner js-file-line">    address _communityTaxAccount,</td>
+        <td id="LC269" class="blob-code blob-code-inner js-file-line">    address _communityContributionAccount,</td>
       </tr>
       <tr>
         <td id="L270" class="blob-num js-line-number" data-line-number="270"></td>
@@ -2278,7 +2278,7 @@
       </tr>
       <tr>
         <td id="L279" class="blob-num js-line-number" data-line-number="279"></td>
-        <td id="LC279" class="blob-code blob-code-inner js-file-line">    function newAccount(</td>
+        <td id="LC279" class="blob-code blob-code-inner js-file-line">    function verifyAccount(</td>
       </tr>
       <tr>
         <td id="L280" class="blob-num js-line-number" data-line-number="280"></td>
@@ -2334,7 +2334,7 @@
       </tr>
       <tr>
         <td id="L293" class="blob-num js-line-number" data-line-number="293"></td>
-        <td id="LC293" class="blob-code blob-code-inner js-file-line">        emit NewAccount(_account);</td>
+        <td id="LC293" class="blob-code blob-code-inner js-file-line">        emit VerifyAccount(_account);</td>
       </tr>
       <tr>
         <td id="L294" class="blob-num js-line-number" data-line-number="294"></td>
@@ -2446,11 +2446,11 @@
       </tr>
       <tr>
         <td id="L320" class="blob-num js-line-number" data-line-number="320"></td>
-        <td id="LC320" class="blob-code blob-code-inner js-file-line">        // Process fees and tax</td>
+        <td id="LC320" class="blob-code blob-code-inner js-file-line">        // Process fees and contribution</td>
       </tr>
       <tr>
         <td id="L321" class="blob-num js-line-number" data-line-number="321"></td>
-        <td id="LC321" class="blob-code blob-code-inner js-file-line">        uint feesAndTax = processFeesAndTax(</td>
+        <td id="LC321" class="blob-code blob-code-inner js-file-line">        uint feesAndContribution = processFeesAndContribution(</td>
       </tr>
       <tr>
         <td id="L322" class="blob-num js-line-number" data-line-number="322"></td>
@@ -2462,7 +2462,7 @@
       </tr>
       <tr>
         <td id="L324" class="blob-num js-line-number" data-line-number="324"></td>
-        <td id="LC324" class="blob-code blob-code-inner js-file-line">            communityTax</td>
+        <td id="LC324" class="blob-code blob-code-inner js-file-line">            communityContribution</td>
       </tr>
       <tr>
         <td id="L325" class="blob-num js-line-number" data-line-number="325"></td>
@@ -2470,7 +2470,7 @@
       </tr>
       <tr>
         <td id="L326" class="blob-num js-line-number" data-line-number="326"></td>
-        <td id="LC326" class="blob-code blob-code-inner js-file-line">        uint valueAfterFees = _value.sub(feesAndTax);</td>
+        <td id="LC326" class="blob-code blob-code-inner js-file-line">        uint valueAfterFees = _value.sub(feesAndContribution);</td>
       </tr>
       <tr>
         <td id="L327" class="blob-num js-line-number" data-line-number="327"></td>
@@ -2868,15 +2868,15 @@
       </tr>
       <tr>
         <td id="L423" class="blob-num js-line-number" data-line-number="423"></td>
-        <td id="LC423" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>Next, we process the fees and tax<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC423" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>Next, we process the fees and contribution<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L424" class="blob-num js-line-number" data-line-number="424"></td>
-        <td id="LC424" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>pre</span> <span class=pl-c1>data-role</span>=&quot;<span class=pl-s>codeBlock</span>&quot; <span class=pl-c1>data-info</span>=&quot;<span class=pl-s>solidity</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>language-solidity</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span>// Process fees and tax</td>
+        <td id="LC424" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>pre</span> <span class=pl-c1>data-role</span>=&quot;<span class=pl-s>codeBlock</span>&quot; <span class=pl-c1>data-info</span>=&quot;<span class=pl-s>solidity</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>language-solidity</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span>// Process fees and contribution</td>
       </tr>
       <tr>
         <td id="L425" class="blob-num js-line-number" data-line-number="425"></td>
-        <td id="LC425" class="blob-code blob-code-inner js-file-line">uint feesAndTax = processFeesAndTax(</td>
+        <td id="LC425" class="blob-code blob-code-inner js-file-line">uint feesAndContribution = processFeesAndContribution(</td>
       </tr>
       <tr>
         <td id="L426" class="blob-num js-line-number" data-line-number="426"></td>
@@ -2888,7 +2888,7 @@
       </tr>
       <tr>
         <td id="L428" class="blob-num js-line-number" data-line-number="428"></td>
-        <td id="LC428" class="blob-code blob-code-inner js-file-line">    communityTax</td>
+        <td id="LC428" class="blob-code blob-code-inner js-file-line">    communityContribution</td>
       </tr>
       <tr>
         <td id="L429" class="blob-num js-line-number" data-line-number="429"></td>
@@ -2896,7 +2896,7 @@
       </tr>
       <tr>
         <td id="L430" class="blob-num js-line-number" data-line-number="430"></td>
-        <td id="LC430" class="blob-code blob-code-inner js-file-line">uint valueAfterFees = _value.sub(feesAndTax);</td>
+        <td id="LC430" class="blob-code blob-code-inner js-file-line">uint valueAfterFees = _value.sub(feesAndContribution);</td>
       </tr>
       <tr>
         <td id="L431" class="blob-num js-line-number" data-line-number="431"></td>
@@ -2904,11 +2904,11 @@
       </tr>
       <tr>
         <td id="L432" class="blob-num js-line-number" data-line-number="432"></td>
-        <td id="LC432" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>em</span><span class=pl-kos>&gt;</span>Process fees and tax<span class=pl-kos>&lt;/</span><span class=pl-ent>em</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC432" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>em</span><span class=pl-kos>&gt;</span>Process fees and contribution<span class=pl-kos>&lt;/</span><span class=pl-ent>em</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L433" class="blob-num js-line-number" data-line-number="433"></td>
-        <td id="LC433" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>pre</span> <span class=pl-c1>data-role</span>=&quot;<span class=pl-s>codeBlock</span>&quot; <span class=pl-c1>data-info</span>=&quot;<span class=pl-s>solidity</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>language-solidity</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span>    /** @notice Calculate the fees and tax, send tax to the communtiy account,</td>
+        <td id="LC433" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>pre</span> <span class=pl-c1>data-role</span>=&quot;<span class=pl-s>codeBlock</span>&quot; <span class=pl-c1>data-info</span>=&quot;<span class=pl-s>solidity</span>&quot; <span class=pl-c1>class</span>=&quot;<span class=pl-s>language-solidity</span>&quot;<span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span>    /** @notice Calculate the fees and contribution, send contribution to the communtiy account,</td>
       </tr>
       <tr>
         <td id="L434" class="blob-num js-line-number" data-line-number="434"></td>
@@ -2916,19 +2916,19 @@
       </tr>
       <tr>
         <td id="L435" class="blob-num js-line-number" data-line-number="435"></td>
-        <td id="LC435" class="blob-code blob-code-inner js-file-line">        @dev Percentage to x dp as defined by taxFeeDecimals e.g.</td>
+        <td id="LC435" class="blob-code blob-code-inner js-file-line">        @dev Percentage to x dp as defined by contributionFeeDecimals e.g.</td>
       </tr>
       <tr>
         <td id="L436" class="blob-num js-line-number" data-line-number="436"></td>
-        <td id="LC436" class="blob-code blob-code-inner js-file-line">            when taxFeeDecimals is 2, 1200 is 12.00%</td>
+        <td id="LC436" class="blob-code blob-code-inner js-file-line">            when contributionFeeDecimals is 2, 1200 is 12.00%</td>
       </tr>
       <tr>
         <td id="L437" class="blob-num js-line-number" data-line-number="437"></td>
-        <td id="LC437" class="blob-code blob-code-inner js-file-line">        @return The total amount used for fees and tax */</td>
+        <td id="LC437" class="blob-code blob-code-inner js-file-line">        @return The total amount used for fees and contribution */</td>
       </tr>
       <tr>
         <td id="L438" class="blob-num js-line-number" data-line-number="438"></td>
-        <td id="LC438" class="blob-code blob-code-inner js-file-line">    function processFeesAndTax(</td>
+        <td id="LC438" class="blob-code blob-code-inner js-file-line">    function processFeesAndContribution(</td>
       </tr>
       <tr>
         <td id="L439" class="blob-num js-line-number" data-line-number="439"></td>
@@ -2940,7 +2940,7 @@
       </tr>
       <tr>
         <td id="L441" class="blob-num js-line-number" data-line-number="441"></td>
-        <td id="LC441" class="blob-code blob-code-inner js-file-line">        uint _communityTax)</td>
+        <td id="LC441" class="blob-code blob-code-inner js-file-line">        uint _communityContribution)</td>
       </tr>
       <tr>
         <td id="L442" class="blob-num js-line-number" data-line-number="442"></td>
@@ -2956,7 +2956,7 @@
       </tr>
       <tr>
         <td id="L445" class="blob-num js-line-number" data-line-number="445"></td>
-        <td id="LC445" class="blob-code blob-code-inner js-file-line">        uint feesIncTax = calcFeesIncTax(</td>
+        <td id="LC445" class="blob-code blob-code-inner js-file-line">        uint feesIncContribution = calcFeesIncContribution(</td>
       </tr>
       <tr>
         <td id="L446" class="blob-num js-line-number" data-line-number="446"></td>
@@ -2972,7 +2972,7 @@
       </tr>
       <tr>
         <td id="L449" class="blob-num js-line-number" data-line-number="449"></td>
-        <td id="LC449" class="blob-code blob-code-inner js-file-line">        uint tax = calcTax(</td>
+        <td id="LC449" class="blob-code blob-code-inner js-file-line">        uint contribution = calcContribution(</td>
       </tr>
       <tr>
         <td id="L450" class="blob-num js-line-number" data-line-number="450"></td>
@@ -2984,7 +2984,7 @@
       </tr>
       <tr>
         <td id="L452" class="blob-num js-line-number" data-line-number="452"></td>
-        <td id="LC452" class="blob-code blob-code-inner js-file-line">            _communityTax</td>
+        <td id="LC452" class="blob-code blob-code-inner js-file-line">            _communityContribution</td>
       </tr>
       <tr>
         <td id="L453" class="blob-num js-line-number" data-line-number="453"></td>
@@ -3004,7 +3004,7 @@
       </tr>
       <tr>
         <td id="L457" class="blob-num js-line-number" data-line-number="457"></td>
-        <td id="LC457" class="blob-code blob-code-inner js-file-line">            _communityTax</td>
+        <td id="LC457" class="blob-code blob-code-inner js-file-line">            _communityContribution</td>
       </tr>
       <tr>
         <td id="L458" class="blob-num js-line-number" data-line-number="458"></td>
@@ -3012,11 +3012,11 @@
       </tr>
       <tr>
         <td id="L459" class="blob-num js-line-number" data-line-number="459"></td>
-        <td id="LC459" class="blob-code blob-code-inner js-file-line">        require(feesIncTax == tax.add(feesToBurn),</td>
+        <td id="LC459" class="blob-code blob-code-inner js-file-line">        require(feesIncContribution == contribution.add(feesToBurn),</td>
       </tr>
       <tr>
         <td id="L460" class="blob-num js-line-number" data-line-number="460"></td>
-        <td id="LC460" class="blob-code blob-code-inner js-file-line">            &amp;quot;feesIncTax should equal tax + feesToBurn&amp;quot;</td>
+        <td id="LC460" class="blob-code blob-code-inner js-file-line">            &amp;quot;feesIncContribution should equal contribution + feesToBurn&amp;quot;</td>
       </tr>
       <tr>
         <td id="L461" class="blob-num js-line-number" data-line-number="461"></td>
@@ -3050,15 +3050,15 @@
       </tr>
       <tr>
         <td id="L468" class="blob-num js-line-number" data-line-number="468"></td>
-        <td id="LC468" class="blob-code blob-code-inner js-file-line">        if (tax &amp;gt; 0) {</td>
+        <td id="LC468" class="blob-code blob-code-inner js-file-line">        if (contribution &amp;gt; 0) {</td>
       </tr>
       <tr>
         <td id="L469" class="blob-num js-line-number" data-line-number="469"></td>
-        <td id="LC469" class="blob-code blob-code-inner js-file-line">            super.transfer(communityTaxAccount, tax);</td>
+        <td id="LC469" class="blob-code blob-code-inner js-file-line">            super.transfer(communityContributionAccount, contribution);</td>
       </tr>
       <tr>
         <td id="L470" class="blob-num js-line-number" data-line-number="470"></td>
-        <td id="LC470" class="blob-code blob-code-inner js-file-line">            emit PaidTax(msg.sender, tax);</td>
+        <td id="LC470" class="blob-code blob-code-inner js-file-line">            emit PaidContribution(msg.sender, contribution);</td>
       </tr>
       <tr>
         <td id="L471" class="blob-num js-line-number" data-line-number="471"></td>
@@ -3071,7 +3071,7 @@
       </tr>
       <tr>
         <td id="L473" class="blob-num js-line-number" data-line-number="473"></td>
-        <td id="LC473" class="blob-code blob-code-inner js-file-line">        return feesIncTax;</td>
+        <td id="LC473" class="blob-code blob-code-inner js-file-line">        return feesIncContribution;</td>
       </tr>
       <tr>
         <td id="L474" class="blob-num js-line-number" data-line-number="474"></td>
@@ -3079,19 +3079,19 @@
       </tr>
       <tr>
         <td id="L475" class="blob-num js-line-number" data-line-number="475"></td>
-        <td id="LC475" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>First the fee is calculated. The tax is taken as a percentage of this fee.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC475" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>First the fee is calculated. The contribution is taken as a percentage of this fee.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L476" class="blob-num js-line-number" data-line-number="476"></td>
-        <td id="LC476" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>taxFeeDecimals defines the number of decimal places in the percentages. So, if taxFeeDecimals is 2,<span class=pl-kos>&lt;</span><span class=pl-ent>br</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC476" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>contributionFeeDecimals defines the number of decimal places in the percentages. So, if contributionFeeDecimals is 2,<span class=pl-kos>&lt;</span><span class=pl-ent>br</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L477" class="blob-num js-line-number" data-line-number="477"></td>
-        <td id="LC477" class="blob-code blob-code-inner js-file-line">a fee of 3300 and tax of 1000 indicates a fee of 33%, with 10% of this fee taken as tax.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC477" class="blob-code blob-code-inner js-file-line">a fee of 3300 and contribution of 1000 indicates a fee of 33%, with 10% of this fee taken as contribution.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L478" class="blob-num js-line-number" data-line-number="478"></td>
-        <td id="LC478" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>With these values, a transfer of 1000 would incur a fee of 330, with 33 sent to the community account as tax, and 297 burned.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC478" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>With these values, a transfer of 1000 would incur a fee of 330, with 33 sent to the community account as contribution, and 297 burned.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L479" class="blob-num js-line-number" data-line-number="479"></td>
@@ -3354,7 +3354,7 @@
       </tr>
       <tr>
         <td id="L543" class="blob-num js-line-number" data-line-number="543"></td>
-        <td id="LC543" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>Finally, we trigger the transfer of tokens, minus the fees and tax. ZeppelinOS ERC20 implementation handles the transfer.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC543" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;/</span><span class=pl-ent>code</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;/</span><span class=pl-ent>pre</span><span class=pl-kos>&gt;</span><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>Finally, we trigger the transfer of tokens, minus the fees and contribution. ZeppelinOS ERC20 implementation handles the transfer.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L544" class="blob-num js-line-number" data-line-number="544"></td>
@@ -4180,7 +4180,7 @@
       </tr>
       <tr>
         <td id="L745" class="blob-num js-line-number" data-line-number="745"></td>
-        <td id="LC745" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>This can be useful to allow communities freedom to change generation, decay, fees, and tax during an initial trial period, and later to make those settings immutable.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
+        <td id="LC745" class="blob-code blob-code-inner js-file-line"><span class=pl-kos>&lt;</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span>This can be useful to allow communities freedom to change generation, decay, fees, and contribution during an initial trial period, and later to make those settings immutable.<span class=pl-kos>&lt;/</span><span class=pl-ent>p</span><span class=pl-kos>&gt;</span></td>
       </tr>
       <tr>
         <td id="L746" class="blob-num js-line-number" data-line-number="746"></td>
