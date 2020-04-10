@@ -12,7 +12,7 @@ jobs:
     image: node
     script:
       - npm install ganache-cli
-      - ganache-cli
+      - npx ganache-cli
       - npm install truffle
       - npm install truffle-assertions
       - npm install truffle-hdwallet-provider
